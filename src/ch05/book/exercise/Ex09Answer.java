@@ -2,7 +2,7 @@ package ch05.book.exercise;
 
 import java.util.Scanner;
 
-public class Ex09 {
+public class Ex09Answer {
 	public static void main(String[] args) {
 		//Q. 학생 수와 각 학생들의 점수를 입력받은 후, 최고 점수 및 평균 점수 구하기
 		boolean run = true;
@@ -21,35 +21,31 @@ public class Ex09 {
 			if(selectNo == 1) {
 				System.out.print("학생수 > ");
 				studentNum = scanner.nextInt();
-				
-			} else if(selectNo == 2) {
 				scores = new int[studentNum];
-				for(int i = 0; i < studentNum; i++) {
+				
+			} else if(selectNo == 2) {			
+				for(int i = 0; i < scores.length; i++) {
 					System.out.print("scores[" + i + "] > ");
 					scores[i] = scanner.nextInt();
-				}
+				}	
 				
 			} else if(selectNo == 3) {
-				for(int i = 0; i < studentNum; i++) {
+				for(int i = 0; i < scores.length; i++) {
 					System.out.println("score[" + i + "] : " + scores[i]);
 				}
 				
 			} else if(selectNo == 4) {					
 				int sum = 0;
-				int max = 0;
+				int max = 0; //Integer.MIN_VALUE;
 				double avg = 0.0;
 				
-				max = scores[0];
-				for(int i = 1; i < scores.length; i++) {
+				for(int i = 0; i < scores.length; i++) {
 					if(max < scores[i]) {
-						max = scores[i];
+						max = scores[i];					
 					}
-				}
-				
-				for(int i = 0; i < studentNum; i++) {
 					sum += scores[i];
-				}				
-				avg = sum / (double)studentNum;
+				}			
+				avg = sum / (double)scores.length;
 				
 				System.out.println("최고 점수 : " + max);
 				System.out.println("평균 점수 : " + avg);
