@@ -1,6 +1,20 @@
 package p99codingbat;
 
+/*
+ * CodingBat - code practice
+ * https://codingbat.com/java/Warmup-1
+ */
 public class Warmup1 {
+	public String notString(String str) {
+		if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+			return str;
+		}
+//		if(str.startsWith("not")) {
+//			return str;
+//		}
+		return "not " + str;
+	}
+
 	public boolean nearHundred(int n) {
 		return (n >= 90 && n <= 110) || (n >= 190 && n <= 210);
 	}
