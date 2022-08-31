@@ -24,21 +24,21 @@ public class C04PolyMorphism {
 	
 	public static Object method4() {
 		
-		return "";
+		return ""; //string은 object이다
 	}
 	
 	public static Object method5() {
 		
-		return new Scanner("");
+		return new Scanner(""); //scanner는 object이다
 	}
 	
 	public static Object method6() {
 		String s = "java";
-		return s;
-	}
+		return s; //string은 object이다
+	} 
 	
 	public static Object method7() {
 		Scanner s = new Scanner("");
-		return s;
+		return s; //scanner는 object이다
 	}
 }

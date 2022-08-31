@@ -9,6 +9,7 @@ public class Parent {
 	}
 	
 	public Parent(String nation) {
+		//부모클래스 생성자 호출(생략되어있음)
 		this.nation = nation;
 		System.out.println("Parent(String nation) call");
 	}

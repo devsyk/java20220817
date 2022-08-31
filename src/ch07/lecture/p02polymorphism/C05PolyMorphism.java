@@ -12,7 +12,7 @@ public class C05PolyMorphism {
 		
 		Object[] arr3 = new Object[3];
 		arr3[0] = new Object();
-		arr3[1] = "iceman";
-		arr3[2] = new Scanner("");
+		arr3[1] = "iceman"; //string은 object이다
+		arr3[2] = new Scanner(""); //scanner는 object이다
 	}
 }
