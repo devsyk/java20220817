@@ -5,6 +5,25 @@ package p99codingbat;
  * https://codingbat.com/java/Warmup-1
  */
 public class Warmup1 {
+	public String everyNth(String str, int n) {
+		String res = "";
+
+		for (int i = 0; i < str.length(); i += n) {
+			char c = str.charAt(i);
+			res += c;
+		}
+
+		return res;
+	}
+
+	public String backAround(String str) {
+		char lastChar = str.charAt(str.length() - 1);
+
+		String res = lastChar + str + lastChar;
+
+		return res;
+	}
+
 	public String notString(String str) {
 		if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
 			return str;
