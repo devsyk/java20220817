@@ -5,6 +5,32 @@ package p99codingbat;
  * https://codingbat.com/java/Warmup-1
  */
 public class Warmup1 {
+	public boolean stringE(String str) {
+		String regex = "[^e]*e[^e]*e?[^e]*e?";
+		return str.matches(regex);
+		
+//		int cnt = 0;
+//
+//		for (int i = 0; i < str.length(); i++) {
+//			if (str.charAt(i) == 'e') {
+//				cnt++;
+//			}
+//		}
+//		return cnt >= 1 && cnt <= 3;
+	}
+
+	public boolean mixStart(String str) {
+		String regex = ".ix.*";
+		// String regex = "[a-z]ix\\s?([a-z]+)?";
+		return str.matches(regex);
+
+//		if (str.length() >= 3) {
+//			String sub = str.substring(1, 3);
+//			return sub.equals("ix");
+//		}
+//		return false;
+	}
+
 	public String everyNth(String str, int n) {
 		String res = "";
 
