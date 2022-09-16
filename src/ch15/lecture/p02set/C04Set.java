@@ -9,6 +9,9 @@ public class C04Set {
 		Set<String> set = new HashSet<>();
 		System.out.println(set.add("java"));
 		set.add("css");
-		set.add("html");
+		set.add("java");
+		System.out.println(set.add(new String("java")));
+
+		System.out.println(set);
 	}
 }
